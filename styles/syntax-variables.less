@@ -1,28 +1,34 @@
-@import "colors";
+// stylesheet :: syntax variables
 
-// General colors
-@syntax-text-color: @light-ghost-white;
-@syntax-cursor-color: @ghost-white;
-@syntax-selection-color: @brown-gray;
-@syntax-background-color: @dark-gray;
+    // colors
+        @import 'syntax-colors';
 
-// Guide colors
-@syntax-wrap-guide-color: rgba(255, 255, 255, .1);
-@syntax-indent-guide-color: rgba(255, 255, 255, .15);
-@syntax-invisible-character-color: rgba(197, 200, 198, .2);
+    // general
+        @syntax-text-color          : @code-text-color;
+        @syntax-cursor-color        : @code-cursor;
+        @syntax-selection-color     : @app-canvas;
+        @syntax-background-color    : darken( @app-canvas, 2% );
+        @syntax-comment-color       : fade( @code-text-color, 36.5% );
 
-// For find and replace markers
-@syntax-result-marker-color: @gray;
-@syntax-result-marker-color-selected: white;
+    // guides
+        @syntax-wrap-guide-color            : rgba(255, 255, 255, .1);
+        // @syntax-indent-guide-color          : darken( @app-canvas, 1% );
+        @syntax-indent-guide-color          : fade( @syntax-text-color, 6.5% );
+        @syntax-invisible-character-color   : rgba(197, 200, 198, .2);
 
-// Gutter colors
-@syntax-gutter-text-color: @syntax-text-color;
-@syntax-gutter-text-color-selected: @syntax-gutter-text-color;
-@syntax-gutter-background-color: lighten(@syntax-background-color, 3%);
-@syntax-gutter-background-color-selected: @syntax-selection-color;
+    // find + replace markers
+        @syntax-result-marker-color             : lighten( @code-canvas, 25% );
+        @syntax-result-marker-color-selected    : @code-text-color;
 
-// For git diff info. i.e. in the gutter
-@syntax-color-renamed: @light-orange;
-@syntax-color-added: @sea-green;
-@syntax-color-modified: @yellow;
-@syntax-color-removed: @pink;
+    // gutter
+        @syntax-gutter-text-color                   : @syntax-text-color;
+        @syntax-gutter-text-color-selected          : @syntax-gutter-text-color;
+        // @syntax-gutter-background-color             : darken( @app-canvas, 2.5% );
+        @syntax-gutter-background-color             : transparent;
+        @syntax-gutter-background-color-selected    : darken( @app-canvas, 1.5% );
+
+    // git diff
+        @syntax-color-renamed   : mix( @code-canvas, @ui-text-yellow, 30% );
+        @syntax-color-added     : mix( @code-canvas, @ui-text-green, 30% );
+        @syntax-color-modified  : mix( @code-canvas, @ui-text-blue, 30% );
+        @syntax-color-removed   : mix( @code-canvas, @ui-text-orange, 30% );

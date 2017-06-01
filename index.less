@@ -1,4 +1,10 @@
-@import 'syntax-variables';
+// stylesheet :: comprehensive syntax stylesheet compiler
+
+    // variables
+        @import 'syntax-variables';
+
+    // languages
+        // @import 'styles/languages/javascript';
 
 atom-text-editor {
   background-color: @syntax-background-color;
@@ -86,7 +92,9 @@ atom-text-editor {
 }
 
 .syntax--comment {
-  color: @brown;
+
+    color: @syntax-comment-color;
+
 }
 
 .syntax--constant {
