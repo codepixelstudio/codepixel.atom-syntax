@@ -6,14 +6,13 @@
     // general
         @syntax-text-color          : @code-text-color;
         @syntax-cursor-color        : @code-cursor;
-        @syntax-selection-color     : @app-canvas;
-        @syntax-background-color    : darken( @app-canvas, 2% );
+        @syntax-selection-color     : darken( @app-canvas, 3% );
+        @syntax-background-color    : darken( @app-canvas, 5% );
         @syntax-comment-color       : fade( @code-text-color, 36.5% );
 
     // guides
         @syntax-wrap-guide-color            : rgba(255, 255, 255, .1);
-        // @syntax-indent-guide-color          : darken( @app-canvas, 1% );
-        @syntax-indent-guide-color          : fade( @syntax-text-color, 6.5% );
+        @syntax-indent-guide-color          : fade( @syntax-text-color, 9.5% );
         @syntax-invisible-character-color   : rgba(197, 200, 198, .2);
 
     // find + replace markers
@@ -23,9 +22,8 @@
     // gutter
         @syntax-gutter-text-color                   : @syntax-text-color;
         @syntax-gutter-text-color-selected          : @syntax-gutter-text-color;
-        // @syntax-gutter-background-color             : darken( @app-canvas, 2.5% );
         @syntax-gutter-background-color             : transparent;
-        @syntax-gutter-background-color-selected    : darken( @app-canvas, 1.5% );
+        @syntax-gutter-background-color-selected    : transparent;
 
     // git diff
         @syntax-color-renamed   : mix( @code-canvas, @ui-text-yellow, 30% );
