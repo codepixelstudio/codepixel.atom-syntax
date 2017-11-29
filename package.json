@@ -1,6 +1,6 @@
 {
 
-    "name": "code-pixel-studio-syntax",
+    "name": "codepixels-syntax",
 
     "theme": "syntax",
 
@@ -10,7 +10,7 @@
 
     "keywords": [],
 
-    "repository": "https://github.com/codepixelstudio/codepixelstudio-atom-syntax",
+    "repository": "https://github.com/codepixelstudio/codepixels-syntax",
 
     "license": "MIT",
 
